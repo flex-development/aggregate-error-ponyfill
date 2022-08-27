@@ -30,6 +30,13 @@ const config = {
          */
         'unicorn/prefer-export-from': 0
       }
+    },
+    {
+      files: ['src/ponyfill.ts'],
+      rules: {
+        '@typescript-eslint/class-literal-property-style': 0,
+        '@typescript-eslint/prefer-as-const': 0
+      }
     }
   ]
 }
