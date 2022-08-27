@@ -6,9 +6,7 @@
 [![license](https://img.shields.io/github/license/flex-development/aggregate-error-ponyfill.svg)](LICENSE.md)
 [![typescript](https://badgen.net/badge/-/typescript?color=2a72bc&icon=typescript&label)](https://typescriptlang.org)
 
-> **ES Proposal spec-compliant [ponyfill][1] for [`AggregateError`][2]**.
-> \
-> \
+> **ES Proposal spec-compliant [ponyfill][1] for [`AggregateError`][2]**.\
 > The `AggregateError` object represents an error when several errors need to be
 > wrapped in a single error. It is thrown when multiple errors need to be
 > reported by an operation, for example by [`Promise.any()`][3], when all
@@ -65,7 +63,26 @@ yarn add @flex-development/aggregate-error-ponyfill@flex-development/aggregate-e
 
 ## Usage
 
-**TODO**: Update documentation.
+```typescript
+import AggregateError from '@flex-development/aggregate-error-ponyfill'
+
+try {
+  throw new AggregateError([new Error('err1'), new Error('err2')], 'oh no!')
+} catch (e) {
+  console.error(e.message) // 'oh no!'
+  console.error(e.name) // 'AggregateError'
+  console.error(e.errors) // [new Error('err1'), new Error('err2')]
+}
+```
+
+### Native
+
+Depending on your environment, you can use the native `AggregateError` instead
+of the ponyfill:
+
+```typescript
+import AggregateError from '@flex-development/aggregate-error-ponyfill/native'
+```
 
 [1]: https://github.com/sindresorhus/ponyfill
 [2]:

@@ -22,6 +22,7 @@ gpgsign
 graphqlrc
 hmarr
 iife
+instanceof
 keyid
 larsgw
 lcov
