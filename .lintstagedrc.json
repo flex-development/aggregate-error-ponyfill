@@ -1,0 +1,6 @@
+{
+  "*": ["yarn check:format", "yarn check:spelling"],
+  "**/*.{cjs,cts,gql,json,json,md,mjs,ts,yml}": ["yarn check:lint"],
+  "**/{*.ts,tsconfig.*}": ["yarn check:types"],
+  "**/yarn.lock": "yarn dedupe --check"
+}
