@@ -1,5 +1,7 @@
 ## 1.0.0 (2021-11-04)
 
+> **This project once lived in a monorepo as a subproject.\
+> Commits listed below are from *before* the repo migration.**
 
 ### :hammer: Build
 
