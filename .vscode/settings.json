@@ -108,7 +108,7 @@
       "icon": "eslint"
     },
     {
-      "extensions": [".graphqlrc.ts"],
+      "extensions": [".graphqlrc.cts"],
       "format": "svg",
       "icon": "graphql"
     },

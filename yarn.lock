@@ -950,7 +950,7 @@ __metadata:
     eslint-plugin-unicorn: "npm:43.0.2"
     eslint-plugin-yml: "npm:1.1.0"
     graphql: "npm:16.6.0"
-    graphql-config: "npm:4.3.5"
+    graphql-config: "patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch"
     growl: "npm:1.10.5"
     husky: "npm:8.0.1"
     is-ci: "npm:3.0.1"
@@ -5068,7 +5068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-config@npm:4.3.5, graphql-config@npm:^4.3.0":
+"graphql-config@npm:4.3.5":
   version: 4.3.5
   resolution: "graphql-config@npm:4.3.5"
   dependencies:
@@ -5088,6 +5088,29 @@ __metadata:
   peerDependencies:
     graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: 05defd986eda31e9c079ee9627f5c118beafa24dba707056837cd3ea78cf619ce67bf7ef6406375ed8324ba4dbe37697e023aa40a7e3c57359b2baed1abd65cc
+  languageName: node
+  linkType: hard
+
+"graphql-config@patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch":
+  version: 4.3.5
+  resolution: "graphql-config@patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch::version=4.3.5&hash=52aeb2"
+  dependencies:
+    "@graphql-tools/graphql-file-loader": "npm:^7.3.7"
+    "@graphql-tools/json-file-loader": "npm:^7.3.7"
+    "@graphql-tools/load": "npm:^7.5.5"
+    "@graphql-tools/merge": "npm:^8.2.6"
+    "@graphql-tools/url-loader": "npm:^7.9.7"
+    "@graphql-tools/utils": "npm:^8.6.5"
+    cosmiconfig: "npm:7.0.1"
+    cosmiconfig-toml-loader: "npm:1.0.0"
+    cosmiconfig-typescript-loader: "npm:^4.0.0"
+    minimatch: "npm:4.2.1"
+    string-env-interpolation: "npm:1.0.1"
+    ts-node: "npm:^10.8.1"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: e0d72ec3217043911414142c5f1946cc7c7866e71e1561cb95187cd8f506c97024f0e45b2250e6846a7b505e351e6b52d5263afe796aea677b3eaf740b1af62b
   languageName: node
   linkType: hard
 
