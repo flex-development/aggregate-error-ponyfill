@@ -1,3 +1,15 @@
+## [2.0.0-alpha.2](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.1...2.0.0-alpha.2) (2022-08-27)
+
+
+### :package: Build
+
+* **pkg:** add `"type": "module"` ([9f53632](https://github.com/flex-development/aggregate-error-ponyfill/commit/9f53632a3c39f3bc218f37090522d4c16431b4f1))
+
+
+### :house_with_garden: Housekeeping
+
+* **pkg:** fix `package.json#author` ([29883e1](https://github.com/flex-development/aggregate-error-ponyfill/commit/29883e1ccd6fb78d83c08b62f111417286852adb))
+
 ## 2.0.0-alpha.1 (2022-08-27)
 
 > **This project once lived in a monorepo as a subproject.\
