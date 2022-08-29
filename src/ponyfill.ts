@@ -3,12 +3,12 @@
  * @module aggregate-error-ponyfill/ponyfill
  */
 
-import AdvanceStringIndex from 'es-abstract/2019/AdvanceStringIndex'
-import CreatePropertyOrThrow from 'es-abstract/2019/CreateDataPropertyOrThrow'
-import GetMethod from 'es-abstract/2019/GetMethod'
-import IsArray from 'es-abstract/2019/IsArray'
-import IterableToList from 'es-abstract/2019/IterableToList'
-import Type from 'es-abstract/2019/Type'
+import AdvanceStringIndex from 'es-abstract/2021/AdvanceStringIndex'
+import CreatePropertyOrThrow from 'es-abstract/2021/CreateDataPropertyOrThrow'
+import GetMethod from 'es-abstract/2021/GetMethod'
+import IsArray from 'es-abstract/2021/IsArray'
+import IterableToList from 'es-abstract/2021/IterableToList'
+import Type from 'es-abstract/2021/Type'
 import getIteratorMethod from 'es-abstract/helpers/getIteratorMethod'
 
 /**
