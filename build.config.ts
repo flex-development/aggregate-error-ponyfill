@@ -27,7 +27,6 @@ import {
 const config: BuildConfig = defineBuildConfig({
   declaration: true,
   entries: [
-    { builder: 'mkdist', input: 'src/' },
     { builder: 'mkdist', ext: 'cjs', format: 'cjs', input: 'src/' },
     { builder: 'mkdist', ext: 'mjs', format: 'esm', input: 'src/' }
   ],
