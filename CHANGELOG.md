@@ -1,3 +1,32 @@
+## [2.0.0-alpha.3](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.2...2.0.0-alpha.3) (2022-08-29)
+
+
+### :package: Build
+
+* fix tsconfig paths resolution in build files ([b753edf](https://github.com/flex-development/aggregate-error-ponyfill/commit/b753edfcc4c689b26bf12d99e2b073b6103c329c))
+* include file extensions for bare specifiers ([b4de4d0](https://github.com/flex-development/aggregate-error-ponyfill/commit/b4de4d07ad2b512959445fa9fb169899bd8cbc49))
+* **deps-dev:** patch graphql-config via yarn resolutions only ([9cbd061](https://github.com/flex-development/aggregate-error-ponyfill/commit/9cbd0613b25b20b7f3593ae6761ecc1641fb20a1))
+* **exports:** remove `.d.ts` outputs ([86b791b](https://github.com/flex-development/aggregate-error-ponyfill/commit/86b791bc54e83c17b66646e68ca6c454e4e19ce8))
+
+
+### :robot: Continuous Integration
+
+* **workflows:** add typecheck step to ci workflow ([5373a67](https://github.com/flex-development/aggregate-error-ponyfill/commit/5373a67fa392f0f91254e339a15660c1e72cea00))
+
+
+### :house_with_garden: Housekeeping
+
+* check types during pre-commit workflow ([1111aaa](https://github.com/flex-development/aggregate-error-ponyfill/commit/1111aaab55653d8bb03542c0be51eef35776a147))
+* fix `jsonc` file linting ([113ca04](https://github.com/flex-development/aggregate-error-ponyfill/commit/113ca04e086452c812f967a295f7a81d3f0ffc3d))
+* remove `require.resolve` from eslint config ([3b72eb3](https://github.com/flex-development/aggregate-error-ponyfill/commit/3b72eb3800ada9a8bef94dea6789586992d28837))
+* **pkg:** cleanup `test` command ([d6016b8](https://github.com/flex-development/aggregate-error-ponyfill/commit/d6016b8fc8526568244e26fc597fb2bab2be8c91))
+* **vscode:** let eslint validate yaml files ([afcdd5f](https://github.com/flex-development/aggregate-error-ponyfill/commit/afcdd5fba84b6fa849f9ea62fe561f270c92d275))
+
+
+### :zap: Refactors
+
+* **ponyfill:** use es2021 abstract operations ([b08bb61](https://github.com/flex-development/aggregate-error-ponyfill/commit/b08bb61a0cceab8b9576eee6817697e967c9b491))
+
 ## [2.0.0-alpha.2](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.1...2.0.0-alpha.2) (2022-08-27)
 
 
