@@ -44,7 +44,7 @@ const config = {
     ResolveHookContext: 'readonly',
     ResolveHookResult: 'readonly'
   },
-  parser: require.resolve('@typescript-eslint/parser'),
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx,
@@ -844,7 +844,7 @@ const config = {
     {
       files: ['*.json'],
       extends: ['plugin:jsonc/prettier'],
-      parser: require.resolve('jsonc-eslint-parser'),
+      parser: 'jsonc-eslint-parser',
       plugins: ['jsonc'],
       rules: {
         'jsonc/no-bigint-literals': 2,
@@ -921,13 +921,13 @@ const config = {
     },
     {
       files: ['*.md'],
-      parser: require.resolve('eslint-plugin-markdownlint/parser'),
+      parser: 'eslint-plugin-markdownlint/parser',
       plugins: ['markdown', 'markdownlint'],
       processor: 'markdown/markdown'
     },
     {
       files: ['*.yml'],
-      parser: require.resolve('yaml-eslint-parser'),
+      parser: 'yaml-eslint-parser',
       plugins: ['yml'],
       rules: {
         'prettier/prettier': 0,
