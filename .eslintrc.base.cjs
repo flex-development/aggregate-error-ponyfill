@@ -842,7 +842,7 @@ const config = {
       }
     },
     {
-      files: ['*.json'],
+      files: ['*.json', '*.jsonc'],
       extends: ['plugin:jsonc/prettier'],
       parser: 'jsonc-eslint-parser',
       plugins: ['jsonc'],
@@ -850,7 +850,6 @@ const config = {
         'jsonc/no-bigint-literals': 2,
         'jsonc/no-binary-expression': 2,
         'jsonc/no-binary-numeric-literals': 2,
-        'jsonc/no-comments': 2,
         'jsonc/no-escape-sequence-in-identifier': 2,
         'jsonc/no-hexadecimal-numeric-literals': 2,
         'jsonc/no-infinity': 2,
@@ -914,9 +913,14 @@ const config = {
             pathPattern: '^$'
           }
         ],
-
         'jsonc/valid-json-number': 2,
         'jsonc/vue-custom-block/no-parsing-error': 2
+      }
+    },
+    {
+      files: ['*.jsonc'],
+      rules: {
+        'jsonc/no-comments': 0
       }
     },
     {
