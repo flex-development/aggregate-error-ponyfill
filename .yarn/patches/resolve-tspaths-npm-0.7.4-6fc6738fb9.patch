@@ -1,0 +1,29 @@
+diff --git a/dist/steps/generateChanges.js b/dist/steps/generateChanges.js
+index 0e85c99246b760ab6e9edeff6b10e7d489106088..eea80a3dd9ef5ac73699ddd8ff0ed1391b5db44f 100644
+--- a/dist/steps/generateChanges.js
++++ b/dist/steps/generateChanges.js
+@@ -4,7 +4,7 @@ exports.aliasToRelativePath = exports.replaceAliasPathsInFile = exports.generate
+ const fs_1 = require("fs");
+ const path_1 = require("path");
+ const errors_1 = require("../utils/errors");
+-exports.IMPORT_EXPORT_REGEX = /(?:(?:require\(|require\.resolve\(|import\()|(?:import|export) (?:.*from )?)['"]([^'"]*)['"]\)?/g;
++exports.IMPORT_EXPORT_REGEX = /(?:(?:require\(|require\.resolve\(|import\()|(?:import|export) (?:.*from )?|)['"]([^'"]*)['"]\)?/g;
+ const MODULE_EXTS = [
+     ".js",
+     ".jsx",
+@@ -110,6 +110,15 @@ function aliasToRelativePath(path, filePath, aliases, programPaths) {
+                 const regex = new RegExp(`${ext.replace(".", "\\.")}$`);
+                 newPath = (0, path_1.relative)(srcDir, `${modulePath}${ext}`).replace(regex, "");
+             }
++
++            // if alias references barrel file, resolve index file
++            if (ext.startsWith('/index') && (0, fs_1.existsSync)(`${modulePath}${ext}`)) {
++              newPath += '/index'
++            }
++
++            // add file extension to support esm
++            newPath += (0, path_1.extname)(filePath)
++
+             const replacement = newPath.startsWith(".") ? newPath : `./${newPath}`;
+             return {
+                 file: filePath,

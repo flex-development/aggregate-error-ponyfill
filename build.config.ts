@@ -9,9 +9,8 @@ import path from 'node:path'
 import { applyChanges } from 'resolve-tspaths/dist/steps/applyChanges'
 import { computeAliases } from 'resolve-tspaths/dist/steps/computeAliases'
 import { generateChanges } from 'resolve-tspaths/dist/steps/generateChanges'
-import { getFilesToProcess } from 'resolve-tspaths/dist/steps/getFilesToProcess'
 import { loadTSConfig } from 'resolve-tspaths/dist/steps/loadTSConfig'
-import type { Alias, Change, TextChange } from 'resolve-tspaths/dist/types'
+import type { Alias, Change } from 'resolve-tspaths/dist/types'
 import {
   defineBuildConfig,
   type BuildConfig,
@@ -20,7 +19,11 @@ import {
   type MkdistBuildEntry
 } from 'unbuild'
 
-/** @const {BuildConfig} config - Build config */
+/**
+ * Build options.
+ *
+ * @const {BuildConfig}
+ */
 const config: BuildConfig = defineBuildConfig({
   declaration: true,
   entries: [
@@ -30,63 +33,41 @@ const config: BuildConfig = defineBuildConfig({
   ],
   hooks: {
     /**
-     * Transforms path aliases found in build files.
+     * Transforms path aliases found in `output.writtenFiles`.
      *
      * @param {BuildContext} ctx - Build context
      * @param {BuildOptions} ctx.options - Build options
+     * @param {MkdistBuildEntry} entry - `mkdist` build entry
+     * @param {{ writtenFiles: string[] }} output - Build results
+     * @param {string[]} output.writtenFiles - Files created during build
      * @return {void} Nothing when complete
      */
-    'mkdist:done'({ options }: BuildContext): void {
-      const { outDir, rootDir } = options
+    'mkdist:entry:build'(
+      ctx: BuildContext,
+      entry: MkdistBuildEntry,
+      output: { writtenFiles: string[] }
+    ): void {
+      const { outDir, rootDir } = ctx.options
+      const { writtenFiles } = output
 
       try {
         const { paths = {} } = loadTSConfig(`${rootDir}/tsconfig.json`).options
 
-        /** @const {string[]} files - Build files to process */
-        const files: string[] = getFilesToProcess(outDir, [
-          'cjs',
-          'd.cts',
-          'd.mts',
-          'd.ts',
-          'mjs'
-        ])
-
-        /** @const {Alias[]} aliases - Path alias objects */
+        /**
+         * Path alias objects.
+         *
+         * @const {Alias[]} aliases
+         */
         const aliases: Alias[] = computeAliases(rootDir, paths)
 
         /**
-         * Changes to apply to build files.
+         * Changes to apply to {@link writtenFiles}.
          *
          * @const {Change[]} changes
          */
-        const changes: Change[] = generateChanges(files, aliases, {
+        const changes: Change[] = generateChanges(writtenFiles, aliases, {
           outPath: outDir,
           srcPath: path.resolve('src')
-        }).map(({ file, text, ...rest }) => {
-          /** @const {string} ext - {@link file} extension */
-          const ext: string = path.extname(file)
-
-          /**
-           * Text changes applied to {@link file}.
-           *
-           * Each change in {@link rest.changes} will be updated to include the
-           * current file extension, {@link ext}.
-           *
-           * @const {TextChange[]} changes
-           */
-          const changes: TextChange[] = (rest.changes ?? []).map(chg => ({
-            ...chg,
-            modified: !/node_modules/.test(path.resolve(file, chg.modified))
-              ? chg.modified + ext
-              : chg.modified
-          }))
-
-          // make sure file extensions are included in path transformations
-          for (const { modified } of changes) {
-            text = text.replace(modified.replace(ext, ''), modified)
-          }
-
-          return { changes, file, text }
         })
 
         return void applyChanges(changes)
@@ -99,12 +80,16 @@ const config: BuildConfig = defineBuildConfig({
      *
      * @see https://github.com/unjs/mkdist#-usage
      *
-     * @param {BuildContext} _ - Build context
-     * @param {MkdistBuildEntry} __ - `mkdist` build entry
+     * @param {BuildContext} ctx - Build context
+     * @param {MkdistBuildEntry} entry - `mkdist` build entry
      * @param {MkdistOptions} options - `mkdist` build options
      * @return {void} Nothing when complete
      */
-    'mkdist:entry:options'(_, __, options: MkdistOptions): void {
+    'mkdist:entry:options'(
+      ctx: BuildContext,
+      entry: MkdistBuildEntry,
+      options: MkdistOptions
+    ): void {
       options.pattern = ['**', '!**/{__mocks__,__snapshots__,__tests__}/**']
     }
   }
