@@ -60,6 +60,9 @@ jobs:
       - id: spelling
         name: Check spelling
         run: yarn check:spelling
+      - id: types
+        name: Check types
+        run: yarn check:types
       - id: test
         name: Run tests
         run: yarn test:cov
