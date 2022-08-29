@@ -4,7 +4,10 @@
  * @see https://github.com/unjs/unbuild#configuration
  */
 
+import { resolveId } from 'externality'
 import type { MkdistOptions } from 'mkdist'
+import { findStaticImports } from 'mlly'
+import fs from 'node:fs'
 import path from 'node:path'
 import { applyChanges } from 'resolve-tspaths/dist/steps/applyChanges'
 import { computeAliases } from 'resolve-tspaths/dist/steps/computeAliases'
@@ -32,23 +35,24 @@ const config: BuildConfig = defineBuildConfig({
   ],
   hooks: {
     /**
-     * Transforms path aliases found in `output.writtenFiles`.
+     * Transforms path aliases and bare specifiers in `output.writtenFiles`.
      *
      * @param {BuildContext} ctx - Build context
      * @param {BuildOptions} ctx.options - Build options
      * @param {MkdistBuildEntry} entry - `mkdist` build entry
-     * @param {{ writtenFiles: string[] }} output - Build results
-     * @param {string[]} output.writtenFiles - Files created during build
-     * @return {void} Nothing when complete
+     * @param {{ writtenFiles: string[] }} results - Build results
+     * @param {string[]} results.writtenFiles - Files created during build
+     * @return {Promise<void>} Nothing when complete
      */
-    'mkdist:entry:build'(
+    async 'mkdist:entry:build'(
       ctx: BuildContext,
       entry: MkdistBuildEntry,
-      output: { writtenFiles: string[] }
-    ): void {
+      results: { writtenFiles: string[] }
+    ): Promise<void> {
       const { outDir, rootDir } = ctx.options
-      const { writtenFiles } = output
+      const { writtenFiles } = results
 
+      // transform path aliases
       try {
         const { paths = {} } = loadTSConfig(`${rootDir}/tsconfig.json`).options
 
@@ -69,10 +73,44 @@ const config: BuildConfig = defineBuildConfig({
           srcPath: path.resolve('src')
         })
 
-        return void applyChanges(changes)
+        applyChanges(changes)
       } catch (e: unknown) {
         console.error(e instanceof Error ? e.message : e)
       }
+
+      // include file extensions for bare specifiers
+      // https://nodejs.org/docs/latest-v16.x/api/esm.html#import-specifiers
+      if (entry.format === 'esm') {
+        for (const entry of writtenFiles) {
+          try {
+            /**
+             * {@link entry} content.
+             *
+             * @var {string} content
+             */
+            let content: string = await fs.promises.readFile(entry, 'utf8')
+
+            for (const { code, specifier } of findStaticImports(content)) {
+              if (!/^(\w|@)/.test(specifier)) continue
+
+              const { path: id } = await resolveId(specifier, process.cwd(), {
+                type: 'module'
+              })
+
+              content = content.replace(
+                code,
+                code.replace(specifier, id.split('node_modules/')[1]!)
+              )
+            }
+
+            await fs.promises.writeFile(entry, content)
+          } catch (e: unknown) {
+            console.error(e instanceof Error ? e.message : e)
+          }
+        }
+      }
+
+      return void 0
     },
     /**
      * Updates `mkdist` build options.

@@ -123,6 +123,7 @@
     "eslint-plugin-promise": "6.0.1",
     "eslint-plugin-unicorn": "43.0.2",
     "eslint-plugin-yml": "1.1.0",
+    "externality": "0.2.2",
     "graphql": "16.6.0",
     "graphql-config": "patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch",
     "growl": "1.10.5",
@@ -153,6 +154,7 @@
     "@ardatan/sync-fetch": "larsgw/sync-fetch#head=worker_threads",
     "graphql-config": "patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch",
     "mkdist": "patch:mkdist@npm:0.3.13#.yarn/patches/mkdist-npm-0.3.13-c41cf41c68.patch",
+    "mlly": "0.5.14",
     "resolve-tspaths": "patch:resolve-tspaths@npm%3A0.7.4#~/.yarn/patches/resolve-tspaths-npm-0.7.4-6fc6738fb9.patch"
   },
   "engines": {
