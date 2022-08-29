@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/aggregate-error-ponyfill",
   "description": "ES Proposal spec-compliant ponyfill for AggregateError",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.3",
   "keywords": [
     "aggregate-error",
     "es-proposal",
