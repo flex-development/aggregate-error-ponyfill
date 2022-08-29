@@ -951,7 +951,7 @@ __metadata:
     eslint-plugin-yml: "npm:1.1.0"
     externality: "npm:0.2.2"
     graphql: "npm:16.6.0"
-    graphql-config: "patch:graphql-config@npm%3A4.3.5#~/.yarn/patches/graphql-config-npm-4.3.5-8989a92a82.patch"
+    graphql-config: "npm:4.3.5"
     growl: "npm:1.10.5"
     husky: "npm:8.0.1"
     is-ci: "npm:3.0.1"
