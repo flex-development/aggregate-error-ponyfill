@@ -73,7 +73,7 @@
     "prepublishOnly": "toggle-scripts -prepack",
     "recommended-bump": "conventional-recommended-bump --preset=conventionalcommits --tag-prefix=$(jq .tagPrefix package.json -r) --verbose",
     "release": "bash ./scripts/release.sh",
-    "test": "NODE_ENV=test ts-node ./node_modules/.bin/vitest run",
+    "test": "vitest run",
     "test:cov": "yarn test --coverage",
     "test:watch": "vitest"
   },
