@@ -84,6 +84,10 @@ of the ponyfill:
 import AggregateError from '@flex-development/aggregate-error-ponyfill/native'
 ```
 
+### Built With
+
+- [`es-abstract`][7]
+
 [1]: https://github.com/sindresorhus/ponyfill
 [2]:
     https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
@@ -92,3 +96,4 @@ import AggregateError from '@flex-development/aggregate-error-ponyfill/native'
   https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries
 [5]: https://docs.npmjs.com/cli/v8/commands/npm-install#description
 [6]: https://yarnpkg.com/features/protocols#git
+[7]: https://github.com/ljharb/es-abstract
