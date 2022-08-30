@@ -1,3 +1,10 @@
+## [2.0.0-alpha.4](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.3...2.0.0-alpha.4) (2022-08-29)
+
+
+### :package: Build
+
+* include file extensions for all import specifiers ([a90400d](https://github.com/flex-development/aggregate-error-ponyfill/commit/a90400d4125c88fa2b78090112a9073a104e3f04))
+
 ## [2.0.0-alpha.3](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.2...2.0.0-alpha.3) (2022-08-29)
 
 
