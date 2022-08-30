@@ -78,21 +78,21 @@ const config: BuildConfig = defineBuildConfig({
         console.error(e instanceof Error ? e.message : e)
       }
 
-      // include file extensions for bare specifiers
+      // include file extensions in import specifiers
       // https://nodejs.org/docs/latest-v16.x/api/esm.html#import-specifiers
-      if (entry.format === 'esm') {
-        for (const entry of writtenFiles) {
-          try {
-            /**
-             * {@link entry} content.
-             *
-             * @var {string} content
-             */
-            let content: string = await fs.promises.readFile(entry, 'utf8')
+      for (const file of writtenFiles) {
+        try {
+          /**
+           * {@link file} content.
+           *
+           * @var {string} content
+           */
+          let content: string = await fs.promises.readFile(file, 'utf8')
 
-            for (const { code, specifier } of findStaticImports(content)) {
-              if (!/^(\w|@)/.test(specifier)) continue
+          for (const { code, specifier } of findStaticImports(content)) {
+            if (path.extname(specifier)) continue
 
+            if (/^(\w|@)/.test(specifier)) {
               const { path: id } = await resolveId(specifier, process.cwd(), {
                 type: 'module'
               })
@@ -101,12 +101,17 @@ const config: BuildConfig = defineBuildConfig({
                 code,
                 code.replace(specifier, id.split('node_modules/')[1]!)
               )
+            } else {
+              content = content.replace(
+                code,
+                code.replace(specifier, specifier + '.' + entry.ext!)
+              )
             }
-
-            await fs.promises.writeFile(entry, content)
-          } catch (e: unknown) {
-            console.error(e instanceof Error ? e.message : e)
           }
+
+          await fs.promises.writeFile(file, content)
+        } catch (e: unknown) {
+          console.error(e instanceof Error ? e.message : e)
         }
       }
 
