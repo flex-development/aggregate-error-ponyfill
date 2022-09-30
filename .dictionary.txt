@@ -16,6 +16,7 @@ dedupe
 dessant
 dohm
 esbenp
+esbuild
 fbca
 fpnv
 gpgsign
@@ -26,7 +27,7 @@ keyid
 larsgw
 lcov
 micnncim
-mkdist
+mkbuild
 mlly
 nocheck
 npmrc

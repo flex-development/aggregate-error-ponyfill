@@ -3,6 +3,4 @@
  * @module aggregate-error-ponyfill
  */
 
-import AggregateError from './ponyfill'
-
-export default AggregateError
+export { default } from './ponyfill'
