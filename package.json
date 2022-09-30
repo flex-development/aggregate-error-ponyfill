@@ -155,7 +155,7 @@
     "resolve-tspaths": "patch:resolve-tspaths@npm%3A0.7.4#~/.yarn/patches/resolve-tspaths-npm-0.7.4-6fc6738fb9.patch"
   },
   "engines": {
-    "node": ">=14.16",
+    "node": ">=14",
     "yarn": "4.0.0-rc.14"
   },
   "packageManager": "yarn@4.0.0-rc.14",
