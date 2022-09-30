@@ -1,3 +1,28 @@
+## [2.0.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.4...2.0.0) (2022-09-30)
+
+
+### :package: Build
+
+* require at least node.js 14 ([7ad7469](https://github.com/flex-development/aggregate-error-ponyfill/commit/7ad74691b797efcf5fa5c5f25c43da7be2617e56))
+* set `typesVersions` ([745b3bf](https://github.com/flex-development/aggregate-error-ponyfill/commit/745b3bf5f21f8041519cf3d8cbca7bd2728737ba))
+* use `mkbuild` to build project ([36ef910](https://github.com/flex-development/aggregate-error-ponyfill/commit/36ef9103042358ff8714c49e66dc49e2c167348e))
+
+
+### :robot: Continuous Integration
+
+* **deps:** bump actions/github-script from 6.2.0 to 6.3.0 ([#6](https://github.com/flex-development/aggregate-error-ponyfill/issues/6)) ([ad85177](https://github.com/flex-development/aggregate-error-ponyfill/commit/ad85177ab87e51afbe6148863d7e4fb759670518))
+* **deps:** bump flex-development/dist-tag-action from 1.1.0 to 1.1.1 ([#8](https://github.com/flex-development/aggregate-error-ponyfill/issues/8)) ([c095a89](https://github.com/flex-development/aggregate-error-ponyfill/commit/c095a89a8aa7d0f5ab90e583c692b0ddf446d451))
+
+
+### :pencil: Documentation
+
+* built with ([bc1399f](https://github.com/flex-development/aggregate-error-ponyfill/commit/bc1399fe8436c93e11a96dd5e3762628610fde2d))
+
+
+### :house_with_garden: Housekeeping
+
+* cleanup ([5aea1d5](https://github.com/flex-development/aggregate-error-ponyfill/commit/5aea1d52da7cade5e9441f9e880dd9f68a5ad0e6))
+
 ## [2.0.0-alpha.4](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.3...2.0.0-alpha.4) (2022-08-29)
 
 
