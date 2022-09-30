@@ -24,9 +24,10 @@
     "LICENSE.md",
     "__tests__/report.json",
     "dist/",
+    "patches/",
     "yarn.lock"
   ],
-  "ignoreRegExpList": [],
+  "ignoreRegExpList": ["/from\\s+(['\"]).*\\1/"],
   "ignoreWords": [],
   "language": "en-US",
   "patterns": [],

@@ -22,7 +22,6 @@ gpgsign
 graphqlrc
 hmarr
 iife
-instanceof
 keyid
 larsgw
 lcov
@@ -38,7 +37,6 @@ pkgs
 preid
 safecrlf
 syncer
-tsnode
 tspaths
 vates
 vitest
