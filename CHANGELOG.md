@@ -1,3 +1,25 @@
+## [2.0.1](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0...2.0.1) (2022-10-02)
+
+
+### :package: Build
+
+* **deps-dev:** bump @flex-development/mkbuild from 1.0.0-alpha.3 to 1.0.0-alpha.6 ([e8f11bb](https://github.com/flex-development/aggregate-error-ponyfill/commit/e8f11bb1325a656e660bfb7aa09bd084f3b52705))
+
+
+### :robot: Continuous Integration
+
+* **deps:** bump dependabot/fetch-metadata from 1.3.3 to 1.3.4 ([#11](https://github.com/flex-development/aggregate-error-ponyfill/issues/11)) ([9cf4fac](https://github.com/flex-development/aggregate-error-ponyfill/commit/9cf4fac3a0bd3f5ea0101f3a4125282e19b20f53))
+
+
+### :bug: Fixes
+
+* missing `default` exports ([#12](https://github.com/flex-development/aggregate-error-ponyfill/issues/12)) ([0f3239b](https://github.com/flex-development/aggregate-error-ponyfill/commit/0f3239b2fbbd14199800880058413d1567bb7716))
+
+
+### :house_with_garden: Housekeeping
+
+* **github:** add label `status:triaged` ([04fa1d3](https://github.com/flex-development/aggregate-error-ponyfill/commit/04fa1d34e4e67f8c2cfb56f6a86b20a937ee8cb3))
+
 ## [2.0.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0-alpha.4...2.0.0) (2022-09-30)
 
 
