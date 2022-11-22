@@ -19,7 +19,6 @@
         "exports",
         "github",
         "hybrid",
-        "native",
         "patches",
         "pkg",
         "ponyfill",

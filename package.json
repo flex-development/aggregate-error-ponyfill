@@ -35,30 +35,16 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./package.json": "./package.json",
-    "./native": {
-      "import": "./dist/native.mjs",
-      "require": "./dist/native.cjs"
-    },
-    "./ponyfill": {
-      "import": "./dist/ponyfill.mjs",
-      "require": "./dist/ponyfill.cjs"
-    }
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "typesVersions": {
     "*": {
-      "*.cjs": [
-        "./dist/*.d.cts",
-        "./dist/*/index.d.cts",
+      ".": [
+        "./dist/index.d.mts",
         "./dist/index.d.cts"
-      ],
-      "*": [
-        "./dist/*.d.mts",
-        "./dist/*/index.d.mts",
-        "./dist/index.d.mts"
       ]
     }
   },
@@ -169,5 +155,6 @@
   },
   "packageManager": "yarn@4.0.0-rc.14",
   "readme": "README.md",
+  "sideEffects": false,
   "tagPrefix": ""
 }
