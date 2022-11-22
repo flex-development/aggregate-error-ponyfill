@@ -1,3 +1,35 @@
+## [3.0.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.1...3.0.0) (2022-11-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove `native` module
+
+### :package: Build
+
+* require node `>=14.16` ([abc02cf](https://github.com/flex-development/aggregate-error-ponyfill/commit/abc02cfa8d62b213428b95f07520139304dcfdef))
+* **deps:** bump es-abstract from 1.19.1 to 1.20.4 ([49d606f](https://github.com/flex-development/aggregate-error-ponyfill/commit/49d606fb2632f3eaea572d5050cd264ec0e9f67b))
+
+
+### :robot: Continuous Integration
+
+* **deps:** bump actions/checkout from 3.0.2 to 3.1.0 ([#14](https://github.com/flex-development/aggregate-error-ponyfill/issues/14)) ([ab7cde6](https://github.com/flex-development/aggregate-error-ponyfill/commit/ab7cde6ab78b520ecd4b7ba0c356c76aae4e919b))
+* **deps:** bump actions/github-script from 6.3.0 to 6.3.3 ([#19](https://github.com/flex-development/aggregate-error-ponyfill/issues/19)) ([7342ac4](https://github.com/flex-development/aggregate-error-ponyfill/commit/7342ac4b5a875c8402226138f4864a1c1995a7ba))
+* **deps:** bump actions/setup-node from 3.4.1 to 3.5.1 ([#18](https://github.com/flex-development/aggregate-error-ponyfill/issues/18)) ([8848b85](https://github.com/flex-development/aggregate-error-ponyfill/commit/8848b851f9b89d431a2c05ecc88f4a06286f4ed4))
+* **deps:** Bump crazy-max/ghaction-import-gpg from 5.1.0 to 5.2.0 ([#20](https://github.com/flex-development/aggregate-error-ponyfill/issues/20)) ([c89d660](https://github.com/flex-development/aggregate-error-ponyfill/commit/c89d660810ef977bc93704afaccfb8b3d04c47bc))
+* **deps:** Bump dependabot/fetch-metadata from 1.3.4 to 1.3.5 ([#21](https://github.com/flex-development/aggregate-error-ponyfill/issues/21)) ([5db5d52](https://github.com/flex-development/aggregate-error-ponyfill/commit/5db5d52eefd51b10f988db8da6849aed6076fbe0))
+* **deps:** bump octokit/graphql-action from 2.2.22 to 2.2.23 ([#16](https://github.com/flex-development/aggregate-error-ponyfill/issues/16)) ([d5ef350](https://github.com/flex-development/aggregate-error-ponyfill/commit/d5ef350e16176ed8ca590cd63c14124e6eff7b4d))
+
+
+### :house_with_garden: Housekeeping
+
+* update project architecture ([9730408](https://github.com/flex-development/aggregate-error-ponyfill/commit/9730408cdcc8b65a576604ed131011bc0ed7dc7a))
+
+
+### :zap: Refactors
+
+* remove `native` module ([1bfa22a](https://github.com/flex-development/aggregate-error-ponyfill/commit/1bfa22aeed91ed263fe39258090b67ff981036e7))
+
 ## [2.0.1](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.0...2.0.1) (2022-10-02)
 
 
