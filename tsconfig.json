@@ -12,6 +12,7 @@
     "exactOptionalPropertyTypes": false,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
     "isolatedModules": false,
     "lib": ["es2021"],
     "module": "esnext",
@@ -54,10 +55,9 @@
     "**/**.cjs",
     "**/**.cts",
     "**/**.mjs",
+    "**/**.mts",
     "**/**.ts",
-    "**/.*.cjs",
-    "**/.*.cts",
-    "**/.*.ts"
+    "**/.*.cjs"
   ],
   "ts-node": {
     "compilerOptions": {},

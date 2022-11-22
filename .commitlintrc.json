@@ -11,6 +11,7 @@
       [
         "cjs",
         "deps",
+        "deps-bundle",
         "deps-dev",
         "deps-opt",
         "deps-peer",
@@ -19,6 +20,7 @@
         "github",
         "hybrid",
         "native",
+        "patches",
         "pkg",
         "ponyfill",
         "release",

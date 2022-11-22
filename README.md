@@ -1,17 +1,33 @@
 # aggregate-error-ponyfill
 
-[![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![module type: cjs+esm](https://img.shields.io/badge/module%20type-cjs%2besm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![npm](https://img.shields.io/npm/v/@flex-development/aggregate-error-ponyfill.svg)](https://npmjs.com/package/@flex-development/aggregate-error-ponyfill)
+[![module type: cjs+esm](https://img.shields.io/badge/module%20type-cjs%2Besm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![license](https://img.shields.io/github/license/flex-development/aggregate-error-ponyfill.svg)](LICENSE.md)
-[![typescript](https://badgen.net/badge/-/typescript?color=2a72bc&icon=typescript&label)](https://typescriptlang.org)
+[![conventional commits](https://img.shields.io/badge/-conventional%20commits-fe5196?logo=conventional-commits&logoColor=ffffff)](https://conventionalcommits.org/)
+[![github actions](http://img.shields.io/badge/-github%20actions-2088ff?style=flat&logo=github-actions&logoColor=ffffff)](https://github.com/features/actions)
+[![typescript](https://img.shields.io/badge/-typescript-3178c6?logo=typescript&logoColor=ffffff)](https://typescriptlang.org/)
+[![vitest](https://img.shields.io/badge/-vitest-6e9f18?style=flat&logo=vitest&logoColor=ffffff)](https://vitest.dev/)
+[![yarn](https://img.shields.io/badge/-yarn-2c8ebb?style=flat&logo=yarn&logoColor=ffffff)](https://yarnpkg.com/)
 
-> **ES Proposal spec-compliant [ponyfill][1] for [`AggregateError`][2]**.\
-> The `AggregateError` object represents an error when several errors need to be
-> wrapped in a single error. It is thrown when multiple errors need to be
-> reported by an operation, for example by [`Promise.any()`][3], when all
-> promises passed to it reject.
+[`AggregateError`][1] [ponyfill][2].
+
+## Contents
+
+- [What is this?](#what-is-this)
+- [When should I use this?](#when-should-i-use-this)
+- [Install](#install)
+- [Use](#use)
+- [API](#api)
+- [Types](#types)
+- [Contribute](#contribute)
+
+## What is this?
+
+This package is an ECMAScript Proposal spec-compliant [ponyfill][2] for [`AggregateError`][1].
+
+## When should I use this?
+
+Use this package when you want to throw `AggregateError` objects in unsupported ECMAScript environments (`< es2021`).
 
 ## Install
 
@@ -19,82 +35,49 @@
 yarn add @flex-development/aggregate-error-ponyfill
 ```
 
-### GitHub Package Registry
-
-To install from the GitHub Package Registry, setup a `.npmrc` or `.yarnrc.yml`
-file to authenticate with the registry. A [Personal Access Token with at least
-the `read:packages` scope][4] is required.
-
-#### `.npmrc`
-
-```utf-8
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-@flex-development:registry=https://npm.pkg.github.com/
-```
-
-#### `.yarnrc.yml`
-
-```yaml
-npmRegistries:
-  //npm.pkg.github.com:
-    npmAlwaysAuth: true
-    npmAuthToken: ${GITHUB_TOKEN}
-
-npmScopes:
-  flex-development:
-    npmRegistryServer: https://npm.pkg.github.com
-```
-
-### Git
-
-See [npm-install][5] or [Git - Protocols | Yarn][6] for details on requesting a
-specific branch, commit, or tag.
-
-#### NPM
-
-```sh
-npm i flex-development/aggregate-error-ponyfill
-```
-
-#### Yarn
+From Git:
 
 ```sh
 yarn add @flex-development/aggregate-error-ponyfill@flex-development/aggregate-error-ponyfill
 ```
 
-## Usage
+<blockquote>
+  <small>
+    See <a href='https://yarnpkg.com/features/protocols#git'>Git - Protocols | Yarn</a>
+    &nbsp;for details on requesting a specific branch, commit, or tag.
+  </small>
+</blockquote>
 
-```typescript
+## Use
+
+```javascript
 import AggregateError from '@flex-development/aggregate-error-ponyfill'
 
 try {
-  throw new AggregateError([new Error('err1'), new Error('err2')], 'oh no!')
+  throw new AggregateError([new Error('some error')], 'oh no!')
 } catch (e) {
   console.error(e.message) // 'oh no!'
-  console.error(e.name) // 'AggregateError'
-  console.error(e.errors) // [new Error('err1'), new Error('err2')]
+  console.error(e.name)    // 'AggregateError'
+  console.error(e.errors)  // [Error: 'some error']
 }
 ```
 
-### Native
+## API
 
-Depending on your environment, you can use the native `AggregateError` instead
-of the ponyfill:
+This package exports no identifiers. The default export is `AggregateError`.
 
-```typescript
-import AggregateError from '@flex-development/aggregate-error-ponyfill/native'
-```
+### `new AggregateError<T>(errors: Iterable<T>, message?: string)`
 
-### Built With
+Wrap several errors in a single error so that multiple errors can be reported by an operation.
 
-- [`es-abstract`][7]
+## Types
 
-[1]: https://github.com/sindresorhus/ponyfill
-[2]:
-    https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
-[3]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/any
-[4]:
-  https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries
-[5]: https://docs.npmjs.com/cli/v8/commands/npm-install#description
-[6]: https://yarnpkg.com/features/protocols#git
-[7]: https://github.com/ljharb/es-abstract
+This package is fully typed with [TypeScript][3].
+
+## Contribute
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+[1]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
+[2]: https://github.com/sindresorhus/ponyfill
+[3]: https://www.typescriptlang.org

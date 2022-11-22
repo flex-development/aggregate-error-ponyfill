@@ -70,7 +70,6 @@ jobs:
         name: Run tests
         run: yarn test:cov
         env:
-          NODE_ENV: test
           NODE_NO_WARNINGS: 1
           VITEST_SEGFAULT_RETRY: 3
       - id: pack
@@ -78,4 +77,3 @@ jobs:
         run: yarn pack -o %s-%v.tgz
         env:
           NODE_ENV: production
-          NODE_NO_WARNINGS: 1
