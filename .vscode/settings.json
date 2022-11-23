@@ -116,7 +116,8 @@
     "json",
     "jsonc",
     "markdown",
-    "typescript"
+    "typescript",
+    "yaml"
   ],
   "files.associations": {
     "*.snap": "jest-snapshot",
@@ -136,12 +137,7 @@
   "markdown.extension.toc.slugifyMode": "github",
   "markdown.extension.toc.updateOnSave": false,
   "npm-intellisense.scanDevDependencies": true,
-  "prettier.configPath": "./.prettierrc.json",
-  "prettier.enable": true,
-  "prettier.ignorePath": "./.prettierignore",
-  "prettier.prettierPath": "./node_modules/prettier",
-  "prettier.resolveGlobalModules": false,
-  "prettier.useEditorConfig": true,
+  "prettier.enable": false,
   "shellformat.flag": "-ci -fn -i=2 -sr",
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.completeJSDocs": true,
@@ -157,6 +153,11 @@
       "extensions": [".graphqlrc.yml"],
       "format": "svg",
       "icon": "graphql"
+    },
+    {
+      "extensions": ["build.json"],
+      "format": "svg",
+      "icon": "tsconfig"
     },
     {
       "extensions": ["snap"],
@@ -179,6 +180,11 @@
       "extensions": ["__snapshots__"],
       "format": "svg",
       "icon": "temp"
+    },
+    {
+      "extensions": ["patches"],
+      "format": "svg",
+      "icon": "include"
     },
     {
       "extensions": ["setup"],
