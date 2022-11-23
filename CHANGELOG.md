@@ -1,3 +1,22 @@
+## [3.1.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/3.0.0...3.1.0) (2022-11-23)
+
+
+### :robot: Continuous Integration
+
+* **deps:** Bump actions/add-to-project from 0.3.0 to 0.4.0 ([#24](https://github.com/flex-development/aggregate-error-ponyfill/issues/24)) ([3a4abcb](https://github.com/flex-development/aggregate-error-ponyfill/commit/3a4abcbb98a17a61be129a6d63bd66b42137239b))
+* **deps:** Bump flex-development/dist-tag-action from 1.1.1 to 1.1.2 ([#23](https://github.com/flex-development/aggregate-error-ponyfill/issues/23)) ([8cb5c80](https://github.com/flex-development/aggregate-error-ponyfill/commit/8cb5c802032773a3dcdebf70b1cce227070f45bb))
+* **deps:** bump hmarr/debug-action from 2.0.1 to 2.1.0 ([#15](https://github.com/flex-development/aggregate-error-ponyfill/issues/15)) ([34b87c2](https://github.com/flex-development/aggregate-error-ponyfill/commit/34b87c20cb358ea17466d8b9560886db36f89c71))
+
+
+### :sparkles: Features
+
+* **ponyfill:** `AggregateError.prototype.cause` support ([d321773](https://github.com/flex-development/aggregate-error-ponyfill/commit/d321773d166f27c7bbfee9a17cdb38211fe92a82))
+
+
+### :house_with_garden: Housekeeping
+
+* sync project template changes ([c5c99eb](https://github.com/flex-development/aggregate-error-ponyfill/commit/c5c99ebdf053653aa76a1f17dc74627f034d2748))
+
 ## [3.0.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/2.0.1...3.0.0) (2022-11-22)
 
 
