@@ -8,6 +8,7 @@
   "extends": "./tsconfig.json",
   "files": [
     "./typings/es-abstract/2021/AdvanceStringIndex.d.ts",
+    "./typings/es-abstract/2021/CreateDataProperty.d.ts",
     "./typings/es-abstract/2021/CreateDataPropertyOrThrow.d.ts",
     "./typings/es-abstract/2021/GetMethod.d.ts",
     "./typings/es-abstract/2021/IsArray.d.ts",

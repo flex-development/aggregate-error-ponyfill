@@ -52,7 +52,13 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       coverage: {
         all: true,
         clean: true,
-        exclude: ['**/__mocks__/**', '**/__tests__/**', '**/index.ts'],
+        exclude: [
+          '**/__mocks__/**',
+          '**/__tests__/**',
+          '**/index.ts',
+          'src/options-get-iterator-method.ts',
+          'src/options.ts'
+        ],
         extension: ['.ts'],
         include: ['src'],
         reporter: ['json-summary', 'lcov', 'text'],

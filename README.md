@@ -27,7 +27,7 @@ This package is an ECMAScript Proposal spec-compliant [ponyfill][2] for [`Aggreg
 
 ## When should I use this?
 
-Use this package when you want to throw `AggregateError` objects in unsupported ECMAScript environments (`< es2021`).
+Use this package when you want to throw `AggregateError` objects in unsupported environments (`< es2021`).
 
 ## Install
 
@@ -56,9 +56,10 @@ import AggregateError from '@flex-development/aggregate-error-ponyfill'
 try {
   throw new AggregateError([new Error('some error')], 'oh no!')
 } catch (e) {
-  console.error(e.message) // 'oh no!'
-  console.error(e.name)    // 'AggregateError'
-  console.error(e.errors)  // [Error: 'some error']
+  console.debug(e instanceof AggregateError) // true
+  console.error(e.name)                      // 'AggregateError'
+  console.error(e.message)                   // 'oh no!'
+  console.error(e.errors)                    // [Error: 'some error']
 }
 ```
 
@@ -66,9 +67,28 @@ try {
 
 This package exports no identifiers. The default export is `AggregateError`.
 
-### `new AggregateError<T>(errors: Iterable<T>, message?: string)`
+### <h4>`new AggregateError<T, C>(errors: Iterable<T>, message?: string, options?: Options<C>)`</h4>
 
 Wrap several errors in a single error so that multiple errors can be reported by an operation.
+
+#### `errors`
+
+An iterable of errors.
+
+#### `message`
+
+An optional human-readable description of the aggregate error.
+
+#### `options`
+
+An object that has the following properties:
+
+##### `cause`
+
+The specific cause of the aggregate error.
+
+When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass
+the original error.
 
 ## Types
 

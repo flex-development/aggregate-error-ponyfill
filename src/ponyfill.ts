@@ -4,64 +4,77 @@
  */
 
 import AdvanceStringIndex from 'es-abstract/2021/AdvanceStringIndex'
+import CreateProperty from 'es-abstract/2021/CreateDataProperty'
 import CreatePropertyOrThrow from 'es-abstract/2021/CreateDataPropertyOrThrow'
 import GetMethod from 'es-abstract/2021/GetMethod'
 import IsArray from 'es-abstract/2021/IsArray'
 import IterableToList from 'es-abstract/2021/IterableToList'
 import Type from 'es-abstract/2021/Type'
 import getIteratorMethod from 'es-abstract/helpers/getIteratorMethod'
+import type Options from './options'
+import type GetIteratorMethodOptions from './options-get-iterator-method'
 
 /**
- * Iterator method options type.
+ * The `AggregateError` object represents an error when several errors need to
+ * be wrapped in a single error.
  *
- * @see {@link getIteratorMethod}
- */
-type GetIteratorMethodOptions = Parameters<typeof getIteratorMethod>['0']
-
-/**
- * A single error that represents a group of errors.
- *
- * It is thrown when multiple errors need to be reported by an operation, e.g.
- * by [`Promise.any()`][1] when all promises passed to it reject.
+ * It is thrown when multiple errors need to be reported by an operation, for
+ * example by [`Promise.any()`][1] when all promises passed to it reject.
  *
  * [1]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/any
  *
- * @see https://tc39.es/proposal-promise-any#sec-aggregate-error-objects
+ * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
  *
  * @template T - Aggregated error type
+ * @template C - Error cause type
  *
+ * @class
  * @extends {Error}
  */
-class AggregateError<T = any> extends Error {
+class AggregateError<T = any, C = unknown> extends Error {
+  /**
+   * Error cause.
+   *
+   * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error/cause
+   *
+   * @public
+   * @member {C | undefined} cause
+   */
+  public cause?: C
+
   /**
    * @public
-   * @member {T[]} errors - Aggregated errors
+   * @member {T[]} errors - Array containing aggregated errors
    */
-  public errors: T[]
+  public errors: T[] = []
 
   /**
    * @public
    * @override
    * @readonly
-   * @member {'AggregateError'} name - Error subclass name
+   * @member {string} name - Error name
    */
-  public override readonly name: 'AggregateError' = 'AggregateError'
+  public override readonly name: string = 'AggregateError'
 
   /**
-   * Creates a single error representing `errors`.
+   * Creates an error for several errors that need to be wrapped in a single
+   * error.
    *
    * @example
    *  new AggregateError([new Error('some error')])
+   * @example
    *  new AggregateError([new Error('err1'), new Error('err2')], 'oh no!')
    *
-   * @param {Iterable<T>} errors - Aggregated errors
-   * @param {string} [message] - Human-readable error message
+   * @param {Iterable<T>} errors - An iterable of errors
+   * @param {string} [message] - Human-readable description of the error
+   * @param {Options<C>} [options] - Error options
+   * @param {C} [options.cause] - The original cause of the error
    */
-  constructor(errors: Iterable<T>, message?: string) {
+  constructor(errors: Iterable<T>, message?: string, options?: Options<C>) {
     super(message)
 
     /**
-     * Iterator method options.
+     * Iterator method creation options.
      *
      * @const {GetIteratorMethodOptions} es
      */
@@ -73,17 +86,14 @@ class AggregateError<T = any> extends Error {
     }
 
     /**
-     * Function that returns an iterator.
+     * Array containing aggregated errors.
      *
-     * @const {() => Iterator<T>} method
+     * @const {T[]} arr
      */
-    const method: () => Iterator<T> = getIteratorMethod(es, errors)
+    const arr: T[] = IterableToList(errors, getIteratorMethod(es, errors))
 
-    // create aggregated error list
-    this.errors = IterableToList(errors, method)
-
-    // re-assign errors property or throw if errors isn't iterable
-    CreatePropertyOrThrow(this, 'errors', IterableToList(this.errors, method))
+    CreatePropertyOrThrow(this, 'errors', arr)
+    CreateProperty(this, 'cause', options?.cause)
   }
 }
 

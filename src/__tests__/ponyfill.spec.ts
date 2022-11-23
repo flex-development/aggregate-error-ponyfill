@@ -8,16 +8,17 @@ import TestSubject from '../ponyfill'
 describe('unit:ponyfill', () => {
   it('should create spec-compliant AggregateError', () => {
     // Arrange
-    const errors = [new SyntaxError(faker.lorem.sentence()), { code: 400 }]
-    const message = faker.lorem.sentence()
+    const cause = new Error('The server responded with a 500 status')
+    const symptom = new Error('The message failed to send')
+    const errors = [symptom, cause]
 
     // Act
-    const result = new TestSubject(errors, message)
+    const result = new TestSubject(errors, symptom.message, { cause })
 
     // Expect
     expect(result).to.be.an.instanceof(Error)
     expect(result.errors).to.deep.equal(errors)
-    expect(result.message).to.equal(message)
+    expect(result.message).to.equal(symptom.message)
     expect(result.name).to.equal('AggregateError')
   })
 
