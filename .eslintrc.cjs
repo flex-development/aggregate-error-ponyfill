@@ -9,7 +9,6 @@
  * @const config - ESLint configuration object
  */
 const config = {
-  root: true,
   extends: ['./.eslintrc.base.cjs'],
   overrides: [
     ...require('./.eslintrc.base.cjs').overrides,
@@ -19,8 +18,15 @@ const config = {
         '@typescript-eslint/class-literal-property-style': 0,
         '@typescript-eslint/prefer-as-const': 0
       }
+    },
+    {
+      files: ['typings/es-abstract/**/*.ts'],
+      rules: {
+        'unicorn/filename-case': 0
+      }
     }
-  ]
+  ],
+  root: true
 }
 
 module.exports = config

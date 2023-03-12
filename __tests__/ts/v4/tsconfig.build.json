@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "noEmitOnError": true,
+    "skipLibCheck": false,
+    "target": "es2020"
+  },
+  "exclude": ["**/__mocks__", "**/__tests__"],
+  "extends": "./tsconfig.json",
+  "files": [
+    "../../../typings/es-abstract/2021/AdvanceStringIndex.d.ts",
+    "../../../typings/es-abstract/2021/CreateDataProperty.d.ts",
+    "../../../typings/es-abstract/2021/CreateDataPropertyOrThrow.d.ts",
+    "../../../typings/es-abstract/2021/GetMethod.d.ts",
+    "../../../typings/es-abstract/2021/IsArray.d.ts",
+    "../../../typings/es-abstract/2021/IterableToList.d.ts",
+    "../../../typings/es-abstract/2021/Type.d.ts"
+  ],
+  "include": ["../../../dist/*", "../../../src/*"]
+}

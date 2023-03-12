@@ -1,3 +1,5 @@
+// MARKDOWNLINT CONFIGURATION
+// https://github.com/DavidAnson/vscode-markdownlint#configure
 {
   "MD001": true,
   "MD002": {
@@ -50,8 +52,7 @@
   },
   "MD023": true,
   "MD024": {
-    "allow_different_nesting": false,
-    "siblings_only": false
+    "siblings_only": true
   },
   "MD025": {
     "front_matter_title": "^\\s*title\\s*[:=]",
@@ -116,17 +117,17 @@
   },
   "MD045": true,
   "MD046": {
-    "style": "consistent"
+    "style": "fenced"
   },
   "MD047": true,
   "MD048": {
-    "style": "consistent"
+    "style": "backtick"
   },
   "MD049": {
-    "style": "consistent"
+    "style": "asterisk"
   },
   "MD050": {
-    "style": "consistent"
+    "style": "asterisk"
   },
   "default": true,
   "extends": null
