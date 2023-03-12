@@ -24,6 +24,7 @@ npmrc
 nvmrc
 pathe
 pkgs
+pnpm
 preid
 syncer
 tscu
