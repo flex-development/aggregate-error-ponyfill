@@ -19,6 +19,7 @@
 - [Use](#use)
 - [API](#api)
 - [Types](#types)
+  - [Interfaces](#interfaces)
 - [Contribute](#contribute)
 
 ## What is this?
@@ -95,6 +96,10 @@ the original error.
 ## Types
 
 This package is fully typed with [TypeScript][3].
+
+### Interfaces
+
+- [`Options`](src/options.ts)
 
 ## Contribute
 
