@@ -26,6 +26,12 @@ branches:
           - context: add-to-project
           - context: auto-merge
           - context: build
+          - context: codecov/changes
+            app_id: 254
+          - context: codecov/patch
+            app_id: 254
+          - context: codecov/project
+            app_id: 254
           - context: commitlint
           - context: dependabot-auto
           - context: format
