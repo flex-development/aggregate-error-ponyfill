@@ -9,6 +9,7 @@
 # - https://docs.github.com/actions/learn-github-actions/expressions
 # - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#pull_request
 # - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+# - https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions
 # - https://docs.github.com/graphql/reference/objects#pullrequest
 # - https://docs.github.com/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request
 # - https://docs.github.com/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
@@ -45,7 +46,7 @@ jobs:
           ref: main
       - id: version
         name: Get project version
-        run: echo "::set-output name=result::$(jq .version package.json -r)"
+        run: echo "result=$(jq .version package.json -r)" >> $GITHUB_OUTPUT
       - id: query
         name: Query linked issues
         uses: octokit/graphql-action@v2.2.23
