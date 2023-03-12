@@ -14,7 +14,7 @@ import pkg from './package.json' assert { type: 'json' }
  */
 const config: Config = defineBuildConfig({
   conditions: ['import', 'require', 'node', 'default'],
-  entries: [{}, { ext: '.cjs', format: 'cjs' }],
+  entries: [{}, { format: 'cjs' }],
   sourcemap: true,
   sourcesContent: false,
   target: 'node' + pkg.engines.node.replace(/^\D+/, ''),

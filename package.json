@@ -41,14 +41,6 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./dist/index.d.mts",
-        "./dist/index.d.cts"
-      ]
-    }
-  },
   "scripts": {
     "build": "mkbuild",
     "changelog": "node --loader=./loader.mjs ./config/changelog.config",
