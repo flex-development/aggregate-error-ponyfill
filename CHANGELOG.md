@@ -1,3 +1,62 @@
+## [3.1.1](https://github.com/flex-development/aggregate-error-ponyfill/compare/3.1.0...3.1.1) (2023-03-12)
+
+
+### :package: Build
+
+* **cjs:** default export `module.exports.default` ([07016e5](https://github.com/flex-development/aggregate-error-ponyfill/commit/07016e53e7d72a6c63feaebc741b205339075613))
+* **deps:** Bump es-abstract from 1.20.4 to 1.21.1 ([#33](https://github.com/flex-development/aggregate-error-ponyfill/issues/33)) ([80aeac9](https://github.com/flex-development/aggregate-error-ponyfill/commit/80aeac9b48db55140c0e88b3f31dd1daac54d8a3))
+* **nvm:** set minimum node version to `>=14.21.3` ([8fb0b8c](https://github.com/flex-development/aggregate-error-ponyfill/commit/8fb0b8cff7fa866df6595a15c48a6bab0d170336))
+* **ts:** remove `typesVersions` ([759a6ef](https://github.com/flex-development/aggregate-error-ponyfill/commit/759a6ef1065caf3277512f1506669b68e6d40b04))
+
+
+### :robot: Continuous Integration
+
+* [[@dependabot](https://github.com/dependabot)] configure private registry ([bb5d463](https://github.com/flex-development/aggregate-error-ponyfill/commit/bb5d463cc0854b8f3aa3ed0d9b8e3dfb2af4958f))
+* **deps:** Bump actions/add-to-project from 0.4.0 to 0.4.1 ([#32](https://github.com/flex-development/aggregate-error-ponyfill/issues/32)) ([51071a3](https://github.com/flex-development/aggregate-error-ponyfill/commit/51071a359162813c0c8ece355275c0027144e0f6))
+* **deps:** Bump actions/checkout from 3.1.0 to 3.2.0 ([#27](https://github.com/flex-development/aggregate-error-ponyfill/issues/27)) ([8481f70](https://github.com/flex-development/aggregate-error-ponyfill/commit/8481f7076d16cd11ac63fb470667ac90e8380dd5))
+* **deps:** Bump actions/checkout from 3.2.0 to 3.3.0 ([#28](https://github.com/flex-development/aggregate-error-ponyfill/issues/28)) ([5f4ef20](https://github.com/flex-development/aggregate-error-ponyfill/commit/5f4ef20dc67fd2f16a93b15ccddbf964d21edce7))
+* **deps:** Bump actions/github-script from 6.3.3 to 6.4.0 ([#31](https://github.com/flex-development/aggregate-error-ponyfill/issues/31)) ([ff6e130](https://github.com/flex-development/aggregate-error-ponyfill/commit/ff6e130383ed2cc21be554d7d280ddfd666ebf0f))
+* **deps:** Bump actions/setup-node from 3.5.1 to 3.6.0 ([#29](https://github.com/flex-development/aggregate-error-ponyfill/issues/29)) ([629d386](https://github.com/flex-development/aggregate-error-ponyfill/commit/629d3862786ace0927bbc2c720a2d56135192021))
+* **deps:** Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 ([#30](https://github.com/flex-development/aggregate-error-ponyfill/issues/30)) ([21549b6](https://github.com/flex-development/aggregate-error-ponyfill/commit/21549b66b6ad7df02c7ff613593604d0cbdbb778))
+* **deps:** Bump dessant/lock-threads from 3.0.0 to 4.0.0 ([#26](https://github.com/flex-development/aggregate-error-ponyfill/issues/26)) ([2ee2e78](https://github.com/flex-development/aggregate-error-ponyfill/commit/2ee2e78a274ed6eaf84e4a74b0d3ddee7df8baef))
+* **workflows:** [`add-to-project`] add items from repo admin account ([4f8e84a](https://github.com/flex-development/aggregate-error-ponyfill/commit/4f8e84afbcafbe12010a56d1450228ddb4c149b1))
+* **workflows:** [`add-to-project`] run workflow when pr is synchronized ([74ae34c](https://github.com/flex-development/aggregate-error-ponyfill/commit/74ae34cf2e3e6d34db94907837f2a4abd03feb59))
+* **workflows:** [`approve-pr`] refactor approval step conditional ([58ece42](https://github.com/flex-development/aggregate-error-ponyfill/commit/58ece4266c36a0ec2360f54bc744d9f56d0a9361))
+* **workflows:** [`ci`] split `ci` job into multiple jobs ([9198259](https://github.com/flex-development/aggregate-error-ponyfill/commit/919825907918fcf30af8b174155fe1c6249a0985))
+* **workflows:** [`ci`] upload coverage report to codecov ([ce6b89c](https://github.com/flex-development/aggregate-error-ponyfill/commit/ce6b89c2711828b7bb187f6f1774d36531182a6d))
+* **workflows:** [`dependabot-auto`] sign lockfile fix commit ([990f02e](https://github.com/flex-development/aggregate-error-ponyfill/commit/990f02e709917d2afb037adbb8bee6f30a445b80))
+* **workflows:** [`integrity`] update `pull_request` event activity types ([856a040](https://github.com/flex-development/aggregate-error-ponyfill/commit/856a0400a32819825eb0cabb17314c0f4025148f))
+* **workflows:** add `auto-merge` ([5446aef](https://github.com/flex-development/aggregate-error-ponyfill/commit/5446aefa8f71ea20132b8cfa82c2824316f39f1d))
+* **workflows:** add `infrastructure` ([56ea166](https://github.com/flex-development/aggregate-error-ponyfill/commit/56ea166c1b367856b78f299a40056a739d6ab26a))
+* **workflows:** use environment files ([4e7f8e2](https://github.com/flex-development/aggregate-error-ponyfill/commit/4e7f8e23493882e7411148d1aa2c986d711116bc))
+
+
+### :pencil: Documentation
+
+* add "contributor covenant code of conduct" ([aed7f7d](https://github.com/flex-development/aggregate-error-ponyfill/commit/aed7f7dfba3b6c54c1d863e7498872f89f86bfae))
+* interfaces ([f0a7eb1](https://github.com/flex-development/aggregate-error-ponyfill/commit/f0a7eb1607ec6593dd1ab6dd417a5eade3ce40aa))
+* reformat "api" section ([240b915](https://github.com/flex-development/aggregate-error-ponyfill/commit/240b915d742d356863be781c8a03e7e9602349d9))
+
+
+### :bug: Fixes
+
+* **install:** [git] make `postinstall` script work with git install ([336906a](https://github.com/flex-development/aggregate-error-ponyfill/commit/336906ae3771a7d96f2383b2226a9ad7e77f168c))
+
+
+### :house_with_garden: Housekeeping
+
+* update project architecture ([0225225](https://github.com/flex-development/aggregate-error-ponyfill/commit/0225225a726c14e732d395d64e0c47234ac47026))
+* **github:** add "package manager" dropdown to bug report template ([b7ae310](https://github.com/flex-development/aggregate-error-ponyfill/commit/b7ae3103a258f99a2ade84bbf65c27b8abfe76b0))
+* **github:** add "typescript version" input to bug report template ([687cd86](https://github.com/flex-development/aggregate-error-ponyfill/commit/687cd86ac1708bd7d01f3e4fe9b50c634d343c0c))
+* **github:** configure sponsor button ([5437bf9](https://github.com/flex-development/aggregate-error-ponyfill/commit/5437bf9d504696a0f2b1a789304b40662ed0b509))
+* **github:** remove "tests" section from pull request template ([880e3b6](https://github.com/flex-development/aggregate-error-ponyfill/commit/880e3b6c5e3a8046885d7b023db6b46dcefebaa7))
+* **tests:** codecov integration ([e7b0994](https://github.com/flex-development/aggregate-error-ponyfill/commit/e7b09942281224c8d2700d580bea60309eb8f89a))
+
+
+### :white_check_mark: Testing
+
+* **ts:** add type tests ([8a2b64f](https://github.com/flex-development/aggregate-error-ponyfill/commit/8a2b64f75e1a3e313867c5ed0998d3dd11ba28b5))
+
 ## [3.1.0](https://github.com/flex-development/aggregate-error-ponyfill/compare/3.0.0...3.1.0) (2022-11-23)
 
 
