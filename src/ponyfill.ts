@@ -1,6 +1,6 @@
 /**
- * @file AggregateError - Ponyfill
- * @module aggregate-error-ponyfill/ponyfill
+ * @file AggregateError
+ * @module aggregate-error-ponyfill/AggregateError
  */
 
 import AdvanceStringIndex from 'es-abstract/2021/AdvanceStringIndex'
@@ -26,21 +26,21 @@ import type GetIteratorMethodOptions from './options-get-iterator-method'
  * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
  *
  * @template T - Aggregated error type
- * @template C - Error cause type
+ * @template Cause - Error cause type
  *
  * @class
  * @extends {Error}
  */
-class AggregateError<T = any, C = unknown> extends Error {
+class AggregateError<T = any, Cause = unknown> extends Error {
   /**
    * Error cause.
    *
    * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error/cause
    *
    * @public
-   * @member {C | undefined} cause
+   * @member {Cause | undefined} cause
    */
-  public cause?: C
+  public cause?: Cause | undefined
 
   /**
    * @public
@@ -67,10 +67,10 @@ class AggregateError<T = any, C = unknown> extends Error {
    *
    * @param {Iterable<T>} errors - An iterable of errors
    * @param {string} [message] - Human-readable description of the error
-   * @param {Options<C>} [options] - Error options
-   * @param {C} [options.cause] - The original cause of the error
+   * @param {Options<Cause>} [options] - Error options
+   * @param {Cause} [options.cause] - The original cause of the error
    */
-  constructor(errors: Iterable<T>, message?: string, options?: Options<C>) {
+  constructor(errors: Iterable<T>, message?: string, options?: Options<Cause>) {
     super(message)
 
     /**

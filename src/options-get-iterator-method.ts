@@ -1,6 +1,6 @@
 /**
  * @file AggregateError - GetIteratorMethodOptions
- * @module aggregate-error-ponyfill/ponyfill/GetIteratorMethodOptions
+ * @module aggregate-error-ponyfill/GetIteratorMethodOptions
  */
 
 import type getIteratorMethod from 'es-abstract/helpers/getIteratorMethod'

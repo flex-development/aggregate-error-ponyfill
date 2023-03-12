@@ -1,11 +1,11 @@
 /**
- * @file Unit Tests - ponyfill
- * @module aggregate-error-ponyfill/tests/unit/ponyfill
+ * @file Unit Tests - AggregateError
+ * @module aggregate-error-ponyfill/tests/unit/AggregateError
  */
 
 import TestSubject from '../ponyfill'
 
-describe('unit:ponyfill', () => {
+describe('unit:AggregateError', () => {
   it('should create spec-compliant AggregateError', () => {
     // Arrange
     const cause = new Error('The server responded with a 500 status')

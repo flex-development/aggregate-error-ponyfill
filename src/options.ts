@@ -1,6 +1,6 @@
 /**
  * @file AggregateError - Options
- * @module aggregate-error-ponyfill/ponyfill/Options
+ * @module aggregate-error-ponyfill/Options
  */
 
 /**
@@ -19,7 +19,7 @@ interface Options<Cause = unknown> {
    *
    * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error/cause
    */
-  cause?: Cause
+  cause?: Cause | undefined
 }
 
 export type { Options as default }
