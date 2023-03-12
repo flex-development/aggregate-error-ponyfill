@@ -8,6 +8,7 @@ dedupe
 dessant
 dohm
 fbca
+ggshield
 gpgsign
 hmarr
 iife
@@ -26,7 +27,6 @@ pathe
 pkgs
 pnpm
 preid
-syncer
 tscu
 unstub
 vates
