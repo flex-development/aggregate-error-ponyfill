@@ -65,7 +65,9 @@ try {
 
 ## API
 
-This package exports no identifiers. The default export is `AggregateError`.
+This package exports no identifiers.
+
+The default export is `AggregateError`.
 
 ### <h4>`new AggregateError<T, C>(errors: Iterable<T>, message?: string, options?: Options<C>)`</h4>
 
