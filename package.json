@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "@types/es-abstract": "1.17.3",
-    "es-abstract": "1.21.1"
+    "es-abstract": "1.21.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.4",
