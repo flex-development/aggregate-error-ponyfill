@@ -1085,7 +1085,7 @@ __metadata:
     typescript: "npm:5.1.0-dev.20230301"
     version-bump-prompt: "npm:6.1.0"
     vite: "npm:4.2.1"
-    vite-tsconfig-paths: "npm:4.0.7"
+    vite-tsconfig-paths: "npm:4.2.0"
     vitest: "npm:0.29.7"
     vitest-github-actions-reporter: "npm:0.10.0"
     yaml-eslint-parser: "npm:1.2.0"
@@ -8810,17 +8810,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfck@npm:^2.0.1":
-  version: 2.0.3
-  resolution: "tsconfck@npm:2.0.3"
+"tsconfck@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "tsconfck@npm:2.1.1"
   peerDependencies:
-    typescript: ^4.3.5
+    typescript: ^4.3.5 || ^5.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
   bin:
     tsconfck: bin/tsconfck.js
-  checksum: e6b224401e0881356f0307278ccc97ea8cbf58cc6d77267c93d8ea0d696a1058e2d69b8271ef05a62617f8d0a5cf86c8c0ddcee4234cb344116395116bb85bb6
+  checksum: a262eca2286054a218ef6c3fe0ef38bf3975d3e4da158726db8f99f441f1cd2d2b07bc2111d2b43d40f48b19cb02dde2914fa74ff00eeb6ef185f494591ddb10
   languageName: node
   linkType: hard
 
@@ -9204,19 +9204,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-tsconfig-paths@npm:4.0.7":
-  version: 4.0.7
-  resolution: "vite-tsconfig-paths@npm:4.0.7"
+"vite-tsconfig-paths@npm:4.2.0":
+  version: 4.2.0
+  resolution: "vite-tsconfig-paths@npm:4.2.0"
   dependencies:
     debug: "npm:^4.1.1"
     globrex: "npm:^0.1.2"
-    tsconfck: "npm:^2.0.1"
+    tsconfck: "npm:^2.1.0"
   peerDependencies:
     vite: "*"
   peerDependenciesMeta:
     vite:
       optional: true
-  checksum: 2c1b93bdc170a8f618a80f888253af51bbca243ad5c95f5e16a82198565788b76ffe21e4b224bedd15637507b473bde747cbb4f19bb97b1993327f1dc37c19cc
+  checksum: ff2c44261a108a4296a63a4ded99e674aee8806f160e2d1524b6f3a220abe6b9faf08074d9df1c826331558206f66925ae92a19b367f2302f376f722dd811d73
   languageName: node
   linkType: hard
 
