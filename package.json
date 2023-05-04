@@ -84,7 +84,7 @@
     "es-abstract": "1.21.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.5.1",
+    "@commitlint/cli": "17.6.3",
     "@commitlint/types": "17.4.4",
     "@flex-development/commitlint-config": "1.0.1",
     "@flex-development/esm-types": "1.0.0",
