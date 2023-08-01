@@ -1711,14 +1711,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:1.4.14, @jridgewell/sourcemap-codec@npm:^1.4.10":
+"@jridgewell/sourcemap-codec@npm:1.4.14":
   version: 1.4.14
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.14"
   checksum: 2147ea75c966fed8a7d9ed6679b7e8c380fa790a9bea5a64f4ec1c26d24e44b461aa60fc3b228cea03a46708d9d1bcf19508035bf27ad5e8f63d0998ed1d1117
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.15":
+"@jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.15":
   version: 1.4.15
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.15"
   checksum: b71b5eeb0af50fb1dbdf18e88aa5cf755baa30723f0d5fd2ac069f861d0c73b12b968321314e4db86d5a4d5d89a292211f68ba94767c620fee35247a94c05890
@@ -1964,17 +1964,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chai@npm:*, @types/chai@npm:4.3.4":
-  version: 4.3.4
-  resolution: "@types/chai@npm:4.3.4"
-  checksum: 477e9eabcf92d43706ac874585c8eab97b3f7808d4cc10479208e8675186633c20f30993a4e3ca510c70489823c3fb3ede508cd8b172bcdd3ef66cec8235e73a
-  languageName: node
-  linkType: hard
-
-"@types/chai@npm:^4.3.5":
+"@types/chai@npm:*, @types/chai@npm:^4.3.5":
   version: 4.3.5
   resolution: "@types/chai@npm:4.3.5"
   checksum: 3fba3f516c45abce7b1478d60a5655aa7f2e04a77d0603c1396f060af98feebd914683e501fac4d993670067c320adf20ad64fbbde9608412520f0887603fdef
+  languageName: node
+  linkType: hard
+
+"@types/chai@npm:4.3.4":
+  version: 4.3.4
+  resolution: "@types/chai@npm:4.3.4"
+  checksum: 477e9eabcf92d43706ac874585c8eab97b3f7808d4cc10479208e8675186633c20f30993a4e3ca510c70489823c3fb3ede508cd8b172bcdd3ef66cec8235e73a
   languageName: node
   linkType: hard
 
@@ -2516,16 +2516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.4.1, acorn@npm:^8.5.0, acorn@npm:^8.8.0, acorn@npm:^8.8.2":
-  version: 8.8.2
-  resolution: "acorn@npm:8.8.2"
-  bin:
-    acorn: bin/acorn
-  checksum: 5a47325f0aa08202080cb167d5b8103720d8a1d199f57988afa48bdfbc3c9973270b00e38c2c874240a49929625beaaae8c4ec683f5272b5f07f1119a457e5d0
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^8.9.0":
+"acorn@npm:^8.4.1, acorn@npm:^8.5.0, acorn@npm:^8.8.0, acorn@npm:^8.8.2, acorn@npm:^8.9.0":
   version: 8.10.0
   resolution: "acorn@npm:8.10.0"
   bin:
@@ -7434,14 +7425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pathe@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "pathe@npm:1.1.0"
-  checksum: 467cb4c0813dc810c8cd056c7c54ef628eb8ff4801057cd9861a8ff2e30143dbdf7e5765e2bd69c7ea65c151b84bbb9956afa9f1802683da2e3ce6565eadaae4
-  languageName: node
-  linkType: hard
-
-"pathe@npm:^1.1.1":
+"pathe@npm:^1.1.0, pathe@npm:^1.1.1":
   version: 1.1.1
   resolution: "pathe@npm:1.1.1"
   checksum: 8bca7eccd68b0076cbcffdc74490cce9515ec88e6d9ba94860a7766a03345170d3d1b36ca43083960dfbd2aa59f9dba0a07e2a27075818da7f19b1cce2985f47
@@ -8433,14 +8417,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"std-env@npm:^3.3.1":
-  version: 3.3.2
-  resolution: "std-env@npm:3.3.2"
-  checksum: 383486453a3b34c9db54c3aab112e066f32c6afda55c89362fe56576a82564d60526578040f7fe3ff6173f18c426597cbf1be69be9de83f56b984533aa2c2599
-  languageName: node
-  linkType: hard
-
-"std-env@npm:^3.3.3":
+"std-env@npm:^3.3.1, std-env@npm:^3.3.3":
   version: 3.3.3
   resolution: "std-env@npm:3.3.3"
   checksum: 2bbe0c96d26c37adcd7c6699c35f2e7443ebec701575485729596e53d962301e9909d052e859e47b78fc25ae9a230817fecaf93188f9686461c48067dd3e855b
